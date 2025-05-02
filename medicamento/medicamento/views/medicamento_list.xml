@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_medicamento_list" model="ir.ui.view">
+        <field name="name">medicamento.list</field>
+        <field name="model">medicamento</field>
+        <field name="arch" type="xml">
+            <list string="Lista de medicamento">
+                <field name="name"/>
+                <field name="precio"/>
+                <field name="stock"/>
+                <field name="estado" widget="medicamento_widget"/>
+                <field name="fecha_expiracion"/>
+                <field name="caducidad"/>  <!-- Nuevo Campo -->
+                <field name="es_alergico"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="medicamento_action" model="ir.actions.act_window">
+        <field name="name">Medicamentos</field>
+        <field name="res_model">medicamento</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    
+    <menuitem id="medicamento_menu" name="Medicamentos" sequence="10"/>
+    <menuitem id="medicamento_submenu" parent="medicamento_menu" name="Gestión de Medicamentos" action="medicamento_action"/>
+</odoo>

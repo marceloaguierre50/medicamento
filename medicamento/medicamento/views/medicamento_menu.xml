@@ -1,0 +1,11 @@
+<odoo>
+    <menuitem id="menu_medicamento_root" name="Medicamentos" sequence="1"/>
+
+    <record id="action_medicamento" model="ir.actions.act_window">
+        <field name="name">Medicamentos</field>
+        <field name="res_model">medicamento</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_medicamento" name="Administrar Medicamentos" parent="menu_medicamento_root" action="action_medicamento"/>
+</odoo>
