@@ -3,7 +3,7 @@
     'version': '18.0',
     'category': 'Medical',
     'summary': 'Módulo para la gestión de medicamentos',
-    'author': 'Marcelo aguierre',
+    'author': 'Marcelo aguierre89',
     'depends': ['base'],
     'data': [
         'views/medicamento_form.xml',
